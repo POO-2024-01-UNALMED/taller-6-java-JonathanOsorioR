@@ -9,7 +9,6 @@ public class Automovil extends Vehiculo {
 			Fabricante fabricante, int puestos) {
 		super(placa, 4, 100, nombre, precio, peso, "FWD", fabricante);
 		
-		cantidadVehiculos++;
 		this.puestos = puestos;
 		cantidadAutomoviles++;
 		
