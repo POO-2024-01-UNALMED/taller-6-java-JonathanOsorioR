@@ -15,11 +15,11 @@ public class Automovil extends Vehiculo {
 	}
 	
 	public static int getCantidadAutomoviles() {
-		return cantidadVehiculos;
+		return Automovil.cantidadAutomoviles;
 	}
 
 	public static void setCantidadAutomoviles(int cantidadVehiculos) {
-		Vehiculo.cantidadVehiculos = cantidadVehiculos;
+		Automovil.cantidadAutomoviles = cantidadVehiculos;
 	}
 
 	public int getPuestos() {
@@ -30,7 +30,4 @@ public class Automovil extends Vehiculo {
 		this.puestos = puestos;
 	}
 	
-		
-	
-
 }
