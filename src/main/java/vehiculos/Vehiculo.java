@@ -113,6 +113,18 @@ public class Vehiculo {
 	public static void setCantidadVehiculos(int cantidadVehiculos) {
 		Vehiculo.cantidadVehiculos = cantidadVehiculos;
 	}
+
+
+
+	public double getPeso() {
+		return peso;
+	}
+
+
+
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
 	
 	
 
