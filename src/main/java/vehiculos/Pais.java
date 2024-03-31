@@ -9,9 +9,9 @@ public class Pais {
 		this.nombre = nombre;
 	}
 	
-	static Pais paisMasVendedor() {
-		return ;
-	}
+	/*static Pais paisMasVendedor() {
+		return " ";
+	}*/
 	
 	public String getNombre() {
 		return this.nombre;

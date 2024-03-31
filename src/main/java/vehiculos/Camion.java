@@ -5,8 +5,8 @@ public class Camion extends Vehiculo {
 	int ejes;
 	static int cantidadCamiones = 0;
 
-	public Camion(String placa, String nombre, double precio, Fabricante fabricante, int ejes) {
-		super(placa, 2, 80, nombre, precio, "4X2", fabricante);
+	public Camion(String placa, String nombre, double precio, double peso, Fabricante fabricante, int ejes) {
+		super(placa, 2, 80, nombre, precio, peso, "4X2", fabricante);
 		
 		cantidadVehiculos++;
 		this.ejes = ejes;
@@ -30,6 +30,7 @@ public class Camion extends Vehiculo {
 	public void setEjes(int ejes) {
 		this.ejes = ejes;
 	}
+	
 	
 	
 
