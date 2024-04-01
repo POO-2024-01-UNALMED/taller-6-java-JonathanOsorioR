@@ -1,4 +1,5 @@
 package vehiculos;
+import java.util.ArrayList;
 
 public class Vehiculo {
 	
@@ -11,7 +12,9 @@ public class Vehiculo {
 	String traccion;
 	Fabricante fabricante;
 	static int cantidadVehiculos;
-
+	static ArrayList <Pais> paises = new ArrayList<>();
+	static ArrayList <Fabricante> fabricantes = new ArrayList<>();
+	
 	
 	public Vehiculo(String placa, int puertas, double velocidadMaxima, String nombre, double precio, double peso, String traccion,
 			Fabricante fabricante) {
@@ -25,10 +28,34 @@ public class Vehiculo {
 		this.traccion = traccion;
 		this.fabricante = fabricante;
 		cantidadVehiculos++;
+		boolean encontrado = false;
+				
+		for (int i = 0; i < paises.size(); i++) {
+			
+			if (Vehiculo.paises.get(i).getNombre().equals(fabricante.getPais().getNombre())) {
+				fabricante.getPais().contador++;
+				encontrado = true;
+				break;
+			}
+		}
+		if (!encontrado) {
+			paises.add(fabricante.getPais());
+		}
+		
+		for (int i = 0; i < fabricantes.size(); i++) {
+			
+			if (Vehiculo.fabricantes.get(i).getNombre().equals(fabricante.getNombre())) {
+				fabricante.contadorF++;
+				encontrado = true;
+				break;
+			}
+		}
+		if (!encontrado) {
+			fabricantes.add(fabricante);
+		}
+		
 	}
-	
-	
-	
+		
 	public String vehiculosPorTipos() {
 		
 		return "Automoviles: " + Automovil.getCantidadAutomoviles() + "\nCamionetas: " + Camioneta.getCantidadCamionetas() + "\nCamiones: " + Camion.getCantidadCamiones();
@@ -38,6 +65,20 @@ public class Vehiculo {
 	public String getPlaca() {
 		return placa;
 	}
+	
+	
+
+
+	public static ArrayList<Pais> getPaises() {
+		return paises;
+	}
+
+
+
+	public static void setPaises(ArrayList<Pais> paises) {
+		Vehiculo.paises = paises;
+	}
+
 
 
 	public void setPlaca(String placa) {
