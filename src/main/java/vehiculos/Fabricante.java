@@ -12,7 +12,7 @@ public class Fabricante {
 		this.pais = pais;
 	}
 	
-	static Fabricante fabricaMayorVentas() {
+	public static Fabricante fabricaMayorVentas() {
 		
 		if (Vehiculo.fabricantes.isEmpty()) { 
 	        return null; 

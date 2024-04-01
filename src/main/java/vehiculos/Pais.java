@@ -11,7 +11,7 @@ public class Pais {
 		contador = 1;
 	}
 	
-	static Pais paisMasVendedor() {
+	public static Pais paisMasVendedor() {
 		
 		
 		if (Vehiculo.paises.isEmpty()) { 
